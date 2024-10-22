@@ -13,12 +13,11 @@
  console.log(greet('Hello', 'Mary')) // Hello, Mary
 */
 
-function greetByName(msg, name) {
-  return `${msg}, ${name}`;
+function greet(msg, name) {
+  return `${msg}, ${name}`; // Повертає рядок, що поєднує msg та name
 }
 
-console.log(greetByName('Hi', 'John'));
-console.log(greetByName('Hey', 'Bob'));
-console.log(greetByName('Hello', 'Mary'));
-
-export { greetByName }
+// Приклади використання функції
+console.log(greet('Hi', 'John'));   // Hi, John
+console.log(greet('Hey', 'Bob'));    // Hey, Bob
+console.log(greet('Hello', 'Mary')); // Hello, Mary
