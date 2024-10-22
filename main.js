@@ -7,17 +7,17 @@ console.log('JS #2. Домашнє завдання. Від простих до 
  * Поекспериментуйте з результатами, виводячи їх у консоль.
  */
 
-var i = 0;
+let i = 0;
+console.log('Початкове значення i:', i);
 
-console.log(++i); 
+console.log('Префіксний інкремент:', ++i); 
+console.log('Постфіксний інкремент:', i++);
+console.log('Значення i після постфіксного інкременту:', i); 
 
-console.log(i++); 
+console.log('Префіксний декремент:', --i); 
 
-console.log(--i); 
-
-console.log(i--); 
-
-
+console.log('Постфіксний декремент:', i--); 
+console.log('Значення i після постфіксного декременту:', i); 
 
 
 /*
@@ -28,20 +28,23 @@ console.log(i--);
  * Результати присвоюються в myTest, потім виводяться в консоль.
  * У розрахунках можна використовувати раніше оголошену змінну myNum та/або числа.
  */
-var myNum = 10;
-var myTest = 20;
 
-myTest += myNum;
-console.log(myTest);
+let myTest = 20;
 
-myTest *= myNum;
-console.log(myTest);
+myTest += 5;
+console.log('myTest після += 5:', myTest);
 
-myTest /= myNum;
-console.log(myTest); 
+myTest -= 3;
+console.log('myTest після -= 3:', myTest);
 
-myTest %= myNum;
-console.log(myTest); 
+myTest *= 2;
+console.log('myTest після *= 2:', myTest);
+
+myTest /= 4;
+console.log('myTest після /= 4:', myTest);
+
+myTest %= 3;
+console.log('myTest після %= 3:', myTest);
 
 /*
  * #3
@@ -50,16 +53,16 @@ console.log(myTest);
  */
 
 const myPi = Math.PI;
-console.log(myPi);
+console.log('myPi:', myPi);
 
 const myRound = Math.round(89.279);
-console.log(myRound);
+console.log('myRound:', myRound);
 
-const myRandom = Math.random() * 10;
-console.log(myRandom);
+const myRandom = Math.random() * 10; // Випадкове число між 0 і 10
+console.log('myRandom:', myRandom);
 
 const myPow = Math.pow(3, 5);
-console.log(myPow);
+console.log('myPow:', myPow);
 
 // константа Pi → myPi
 // округлене значення числа 89.279 → myRound
@@ -74,16 +77,13 @@ console.log(myPow);
  * Присвойте ключу str рядок тексту "Мама мыла раму, рама мыла маму", ключу length встановіть довжину цього рядка.
  */
 
-const strObj = {
-    str: "Мама мыла раму, рама мыла маму",
-    length: str.length
-};
-
-console.log(strObj);
-
 // Мама мыла раму, рама мыла маму
 //
 
+let strObj = {
+    str: "Мама мыла раму, рама мыла маму",
+    length: "Мама мыла раму, рама мыла маму".length
+};
 
 /*
  * #5
@@ -93,11 +93,11 @@ console.log(strObj);
  * Результатом для isRama має бути буль true.
  */
 
-const isRamaPos = strObj.str.indexOf('рама');
-console.log(isRamaPos);
+let isRamaPos = strObj.str.indexOf('рама');
+console.log('isRamaPos:', isRamaPos);
 
-const isRama = strObj.str.includes('рама');
-console.log(isRama);
+let isRama = isRamaPos !== -1;
+console.log('isRama:', isRama);
 
 // isRamaPos
 // isRama
@@ -112,8 +112,8 @@ console.log(isRama);
  *      Результат: 'Мама моет раму, Рама держит маму'
  */
 
-const strReplace = strObj.str.replace('рама', 'Рама');
-console.log(strReplace);
+let strReplace = strObj.str.replace('мыла', 'моет').replace('рама мыла', 'Рама держит'); 
+console.log('strReplace:', strReplace);
 
 // strReplace
 
@@ -124,13 +124,17 @@ console.log(strReplace);
  * Преобразуйте текст 'some STRING' у верхній, потім у нижній регістри, результат відобразіть у консолі.
  */
 
-const someStr = 'some STRING';
-const upperStr = someStr.toUpperCase();
-console.log(upperStr);
+var someStr = 'some STRING';
+var upperStr = someStr.toUpperCase();
+console.log('upperStr:', upperStr);
 
-const lowerStr = someStr.toLowerCase();
-console.log(lowerStr);
+var lowerStr = someStr.toLowerCase();
+console.log('lowerStr:', lowerStr);
 
 // var someStr = 'some STRING'
 // var upperStr
 // var lowerStr
+
+
+
+
